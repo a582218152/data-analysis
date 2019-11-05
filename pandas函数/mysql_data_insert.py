@@ -7,7 +7,7 @@ from datetime import datetime, date
 
 input_file = sys.argv[1]
 #连接数据库
-con = MySQLdb.connect(host='localhost', port=3306,db='my_suppliers',user='root',passwd='Aa582218152')
+con = MySQLdb.connect(host='localhost', port=3306,db='my_suppliers',user='root',passwd='xxx')
 c = con.cursor()
 #向suppliers中插入数据
 file_reader = csv.reader(open(input_file,'r'))
