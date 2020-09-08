@@ -26,16 +26,16 @@ if res1 != 0:
 cmd4 = 'yum install -y autoconf'
 os.system(cmd4)
 #解压server
-cmd3 = 'rpm -ivh --nodeps --force ' + mysql_server
+cmd3 = 'rpm -ivh --nodeps --force ' + mysql_client
 res3 = os.system(cmd3)
 if res3 !=0:
-    print("解压server失败")
+    print("解压client失败")
     sys.exit()
 #解压server
-cmd2 = 'rpm -ivh --nodeps --force ' + mysql_client
+cmd2 = 'rpm -ivh --nodeps --force ' + mysql_server
 res2 = os.system(cmd2)
 if res2 != 0:
-    print('解压client失败')
+    print('解压server失败')
     sys.exit(1)
 
 #打开某个文件拿取字符
